@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+circle {
+    fill: red;
+    opacity: 0.5;
+}
+
+svg {
+    background: url(./tree.jpg) no-repeat;
+    background-size: auto 100%;
+    width: 600px;
+    height: 500px;
+    border: 1px solid red;
+}
