@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.root {
+    display: flex;
+    flex-direction: row;
+}
+
+circle {
+    fill: red;
+    opacity: 0.5;
+    /* opacity: 0; */
+}
+
+svg {
+    background: url(./tree.jpg) no-repeat;
+    background-size: auto 100%;
+    width: 600px;
+    height: 500px;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+.action {
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    margin: 5px;
+}
+
+/* svg */
+
+path {
+    fill: blue;
+    /* fill: none; */
+    stroke: blue;
+    stroke-width: 1px;
+}

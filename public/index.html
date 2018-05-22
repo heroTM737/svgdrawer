@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="name" content="Concept Map" />
+    <meta name="description" content="An abstract mapping for parameters. Works best if first tag is 'unique' among the tracklist, and the second tag applies to multiple tracks"
+    />
+    <meta name="mintags" content="2" />
+    <meta name="maxtags" content="2" />
+
+    <title>SVG</title>
+    <link rel="shortcut icon" href="Logo_D3.svg.png" />
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+
+    <script src="d3.v5.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class='root'>
+        <div id='svgcontainer'></div>
+        <div class='action'>
+            <button onclick="saveData()">save data</button>
+            <button onclick="addPoint()">add point</button>
+            <button onclick="addPath()">add path</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
