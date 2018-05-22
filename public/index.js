@@ -30,11 +30,13 @@ var savedData = null;
 $.get('data.json', function (result) {
     savedData = result;
     for (var i in result) {
-        createPath(i, result[i]);
+        for (var j in result[i]) {
+            createPath(j, i, result[i][j]);
+        }
     }
 });
 
-function createPath(id, data) {
+function createPath(id, groupId, data) {
     var group = svg.append("g");
     var lineGraph = null;
 
@@ -54,10 +56,11 @@ function createPath(id, data) {
         });
 
     map[id] = {
-        data: data,
-        group: group,
-        drag: drag,
-        lineGraph: lineGraph
+        groupId,
+        data,
+        group,
+        drag,
+        lineGraph
     }
 }
 
@@ -84,7 +87,8 @@ var addPath = function () {
     while (savedData[randomId]) {
         randomId = genId();
     }
-    savedData[randomId] = [
+    var groupId = 'leaves';
+    var newGroup = [
         {
             "x": "10",
             "y": "10"
@@ -98,6 +102,7 @@ var addPath = function () {
             "y": "10"
         },
     ];
-    createPath(randomId, savedData[randomId]);
+    savedData[groupId][randomId] = newGroup;
+    createPath(randomId, 'leaves', newGroup);
 
 }
